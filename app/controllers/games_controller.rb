@@ -34,9 +34,13 @@ class GamesController < ApplicationController
 
    # byebug
     @game = Game.new
-    @game.name = params[:game][:name]
-    @game.category_id = params[:game][:category_id]
-    @game.description = params[:game][:description]
+ #   @game.name = params[:game][:name]
+ #   @game.category_id = params[:game][:category_id]
+ #   @game.description = params[:game][:description]
+
+    @game.name = params[:name]
+    @game.category_id = params[:category_id]
+    @game.description = params[:description]
 
     respond_to do |format|
       if @game.save
