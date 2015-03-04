@@ -36,6 +36,10 @@ end
 group :development do
   gem 'rails_layout'
   gem 'sqlite3'
+
+  # For debugging
+  gem 'byebug'
+
 end
 
 group :production do

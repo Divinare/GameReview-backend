@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /games
   # GET /games.json
@@ -17,23 +18,25 @@ class GamesController < ApplicationController
   def new
     @game = Game.new
     @categories = Category.all
-    respond_to do |format|
-      format.html
-    end
+
   end
 
   # GET /games/1/edit
   def edit
     @categories = Category.all
-    respond_to do |format|
-      format.html
-    end 
+
   end
 
   # POST /games
   # POST /games.json
   def create
-    @game = Game.new(game_params)
+   # @game = Game.new(game_params)
+
+   # byebug
+    @game = Game.new
+    @game.name = params[:game][:name]
+    @game.category_id = params[:game][:category_id]
+    @game.description = params[:game][:description]
 
     respond_to do |format|
       if @game.save
