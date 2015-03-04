@@ -30,17 +30,17 @@ class GamesController < ApplicationController
   # POST /games
   # POST /games.json
   def create
-   # @game = Game.new(game_params)
+    @game = Game.new(game_params)
 
   #  byebug
-    @game = Game.new
+  #  @game = Game.new
  #   @game.name = params[:game][:name]
  #   @game.category_id = params[:game][:category_id]
  #   @game.description = params[:game][:description]
 
-    @game.name = params[:name]
-    @game.category_id = params[:category_id]
-    @game.description = params[:description]
+#    @game.name = params[:name]
+#    @game.category_id = params[:category_id]
+#    @game.description = params[:description]
 
     respond_to do |format|
       if @game.save
@@ -88,3 +88,5 @@ class GamesController < ApplicationController
       params.require(:game).permit(:name, :category_id, :description)
     end
 end
+
+
