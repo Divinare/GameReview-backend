@@ -5,6 +5,8 @@ gem 'rails', '4.0.2'
 
 gem 'bootstrap-sass'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
