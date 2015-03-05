@@ -10,5 +10,16 @@
   <%= @category.description %>
 </p>
 
+<strong>Games in this category:</strong>
+<br />
+<% @games.each do |game| %>
+   <%= link_to game.name, game %>
+   <b>Description: </b><%= game.description %>
+</br>
+<% end %>
+
+
+<br />
+
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
