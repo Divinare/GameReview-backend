@@ -4,6 +4,7 @@ class Game < ActiveRecord::Base
 
 	validates_uniqueness_of :name
 
+	validates_length_of :category, :minimum => 3
 
   	validates_length_of :name, :minimum => 3
 	validates_length_of :name, :maximum => 50
