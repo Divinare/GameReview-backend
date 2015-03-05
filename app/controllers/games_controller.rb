@@ -32,16 +32,6 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(game_params)
 
-  #  byebug
-  #  @game = Game.new
- #   @game.name = params[:game][:name]
- #   @game.category_id = params[:game][:category_id]
- #   @game.description = params[:game][:description]
-
-#    @game.name = params[:name]
-#    @game.category_id = params[:category_id]
-#    @game.description = params[:description]
-
     respond_to do |format|
       if @game.save
         format.html { redirect_to @game, notice: 'Game was successfully created.' }
