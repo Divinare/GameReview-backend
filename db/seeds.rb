@@ -20,8 +20,13 @@ Game.create :name => 'Minecraft', :category_id => 4, :description => 'Build a ca
 
 
 Review.create :game_id => 1, :rating => 5, :user => 'Gamer', :text => 'A very good strategy game'
+Review.create :game_id => 1, :rating => 3, :user => 'Anonymous', :text => 'A good game!'
+Review.create :game_id => 1, :rating => 4, :user => 'Anonymous', :text => 'I like this game!'
+
 Review.create :game_id => 2, :rating => 3, :user => 'Bored guy', :text => 'Just grind, grind and grind in this game'
+Review.create :game_id => 2, :rating => 5, :user => 'Gamer', :text => 'This is fun'
+
 Review.create :game_id => 3, :rating => 5, :user => 'Pro', :text => 'A very nice tactical game'
+Review.create :game_id => 3, :rating => 5, :user => 'Silver', :text => 'Cheaters!'
 
-
-
+Review.create :game_id => 4, :rating => 3, :user => 'Anonymous', :text => 'A fun adventure game'
