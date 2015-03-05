@@ -7,6 +7,7 @@ else
 end
 
 json.reviews @reviews do |review|
+   json.id review.id
    json.rating review.rating
    json.text review.text
    json.user review.user
