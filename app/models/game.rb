@@ -1,5 +1,7 @@
 class Game < ActiveRecord::Base
 
+	include RatingAverage
+
 	belongs_to :category
 	has_many :reviews, dependent: :destroy
 

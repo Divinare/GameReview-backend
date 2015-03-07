@@ -6,6 +6,8 @@ else
    json.reviews_amount @reviews.size
 end
 
+json.average_rating round(@game.average_rating)
+
 json.reviews @reviews do |review|
    json.id review.id
    json.rating review.rating

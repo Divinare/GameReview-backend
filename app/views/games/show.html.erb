@@ -15,13 +15,20 @@
   <%= @game.description %>
 </p>
 
+<p>
+  <strong>Average rating:</strong>
+  <%= round(@game.average_rating) %>
+</p>
+
 <table>
 	<th></td>
 	<th></th>
+  <th></th>
 	<tr>
 	<% @reviews.each do |review| %>
-	<td>User: <% if review.user.blank? %><%= "Anonymous" %><% else %><%= review.user %><% end %></td>
-    <td><b>Review: </b><%= review.text %></td>
+	    <td>User: <% if review.user.blank? %><%= "Anonymous" %><% else %><%= review.user %><% end %></td>
+      <td>Rating: <%= review.rating %></td>
+      <td><b>Review: </b><%= review.text %></td>
 	</tr>
 <% end %>
 </table>
