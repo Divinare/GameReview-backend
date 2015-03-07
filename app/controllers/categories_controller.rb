@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @games = Game.where(:category_id => params[:id])
+    @reviews = Review.all
   end
 
   # GET /categories/new
