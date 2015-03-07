@@ -15,5 +15,16 @@
   <%= @game.description %>
 </p>
 
+<table>
+	<th></td>
+	<th></th>
+	<tr>
+	<% @reviews.each do |review| %>
+	<td>User: <% if review.user.blank? %><%= "Anonymous" %><% else %><%= review.user %><% end %></td>
+    <td><b>Review: </b><%= review.text %></td>
+	</tr>
+<% end %>
+</table>
+
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>

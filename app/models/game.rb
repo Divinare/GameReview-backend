@@ -1,6 +1,7 @@
 class Game < ActiveRecord::Base
 
 	belongs_to :category
+	has_many :reviews, dependent: :destroy
 
 	validates_uniqueness_of :name
 

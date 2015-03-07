@@ -3,7 +3,7 @@ GameReviewBackend::Application.routes.draw do
 
   resources :games
 
-  resources :categories
+  resources :categories, :only => [:index, :show]
 
   root :to => 'games#index'
 
