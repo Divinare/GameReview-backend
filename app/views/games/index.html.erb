@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Average Rating</th>
       <th>Category</th>
       <th>Description</th>
       <th></th>
@@ -16,6 +17,7 @@
     <% @games.each do |game| %>
       <tr>
         <td><%= link_to game.name, game %></td>
+        <td><% if game.reviews.count != 0 %> <%= round(game.average_rating) %> <% else %> <%= "----" %> <% end %></td>
         <td><%= link_to Category.where(:id => game.category_id).first.name, Category.where(:id => game.category_id).first %></td>
         <td><%= game.description %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
