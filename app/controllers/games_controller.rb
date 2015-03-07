@@ -7,6 +7,7 @@ class GamesController < ApplicationController
   def index
     @games = Game.all
     @categories = Category.all
+    @reviews = Review.all
   end
 
   # GET /games/1
